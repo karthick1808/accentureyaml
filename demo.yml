@@ -1,0 +1,10 @@
+number: 30
+hexadecex: 0x12d4
+octalex: 012378
+height: 180.0258
+pi: 3.14e+05
+condition: true
+condition: false
+strl: this is a normal string 
+str2: "the cost is 30$ \n"
+str3: 'the cost is 30$ \n'
