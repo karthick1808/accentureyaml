@@ -1,0 +1,25 @@
+list: [1,2,3,4,5]
+list1: [1, 2, 3, 4, 5]
+alphabets: [a,b,c,d,e,f,g,h,i,j,k,l]
+alpha: [abc,def,ghi,jkl,mno,pqr]
+beta: ['abc','def','ghi','jkl','mno','pqr']
+gamma: ["abc","def","ghi","jkl","mno","pqr"]
+numbers:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+karthick:
+  - "aaa"
+  - "bbb"
+  - "ccc"
+  - "ddd"
+  - "eee"
+demo:
+  - 10
+  - 20.5
+  - 0xabc
+  - abc
+  - "AAA#$%^"
+  - 'BBB$%^&'
