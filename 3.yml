@@ -1,0 +1,20 @@
+Student3:
+  Name: zzzz
+  Address:
+    - 1st street
+    - city name
+    - state name
+    - country
+Student4:
+  Name: AAA
+  Address:
+    - street name
+    - city name
+    - country name
+  subject:
+    - Maths:
+      - Marks: 100
+      - Grade: A
+    - Physics:
+      - Marks: 50
+      - Grade: C
