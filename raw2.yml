@@ -1,0 +1,9 @@
+---
+- name: Get Output Without File
+  hosts: all
+  become: yes
+  tasks:
+   - name: Ececuting command
+     raw: whoami
+     register: output
+   - debug: msg="Current User is:{{output.stdout}}"

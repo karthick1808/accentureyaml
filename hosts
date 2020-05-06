@@ -1,0 +1,5 @@
+amazon ansible_host=172.31.34.79 ansible_ssh_private_key_file=/home/ec2-user/spectrum.pem ansible_user=ec2-user
+rhel81 ansible_host=172.31.40.115 ansible_ssh_private_key_file=/home/ec2-user/spectrum.pem ansible_user=ec2-user
+rhel82 ansible_host=172.31.34.74 ansible_ssh_private_key_file=/home/ec2-user/spectrum.pem ansible_user=ec2-user
+ubuntu1 ansible_host=172.31.46.36 ansible_ssh_private_key_file=/home/ec2-user/spectrum.pem ansible_user=ubuntu
+ubuntu2 ansible_host=172.31.34.215 ansible_ssh_private_key_file=/home/ec2-user/spectrum.pem ansible_user=ubuntu

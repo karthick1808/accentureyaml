@@ -1,0 +1,23 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Executing Copy Module and Copies File to Remote
+    copy:
+     src: /root/program.sh
+     dest: /home/ec2-user/program.sh
+     mode: 0755
+    when: (ansible_facts['distribution'] == "RedHat" and ansible_facts['distribution_major_version'] == "8")
+
+  - name: Change the file line
+    lineinfile:
+     state: present
+     dest: /home/ec2-user/program.sh
+     regexp: '^HOSTNAME='
+     line: HOSTNAME={{ansible_hostname}}
+    when: (ansible_facts['distribution'] == "RedHat" and ansible_facts['distribution_major_version'] == "8")
+
+  - shell: sh /home/ec2-user/program.sh
+    register: output
+    when: (ansible_facts['distribution'] == "RedHat" and ansible_facts['distribution_major_version'] == "8")
+  - debug: var=output.stdout

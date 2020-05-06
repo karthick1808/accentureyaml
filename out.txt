@@ -1,0 +1,41 @@
+
+PLAY [Get Output Without File] *******************************************************************************************************************************
+
+TASK [Gathering Facts] ***************************************************************************************************************************************
+ok: [amazon]
+ok: [rhel81]
+ok: [rhel82]
+ok: [ubuntu2]
+ok: [ubuntu1]
+
+TASK [Ececuting command] *************************************************************************************************************************************
+changed: [amazon]
+changed: [rhel81]
+changed: [rhel82]
+changed: [ubuntu1]
+changed: [ubuntu2]
+
+TASK [debug] *************************************************************************************************************************************************
+ok: [amazon] => {
+    "demo.stdout": "root\r\n"
+}
+ok: [rhel81] => {
+    "demo.stdout": "root\r\n"
+}
+ok: [rhel82] => {
+    "demo.stdout": "root\r\n"
+}
+ok: [ubuntu1] => {
+    "demo.stdout": "\r\nroot\r\n"
+}
+ok: [ubuntu2] => {
+    "demo.stdout": "root\r\n"
+}
+
+PLAY RECAP ***************************************************************************************************************************************************
+amazon                     : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+rhel81                     : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+rhel82                     : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+ubuntu1                    : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+ubuntu2                    : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

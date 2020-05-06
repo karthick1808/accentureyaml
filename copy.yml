@@ -1,0 +1,18 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Copy file with owner and permissions
+    copy:
+     src: /home/ec2-user/spectrum.pem
+     dest: /home/ec2-user/spectrum.pem
+     owner: ec2-user
+     group: ec2-user
+     mode: '0644'
+    when: (ansible_facts['distribution'] == "RedHat" and ansible_facts['distribution_major_version'] == "8")
+  - name: Ensure SELinux is set to enforcing mode
+    lineinfile:
+     path: /etc/selinux/config
+     regexp: '^SELINUX='
+     line: SELINUX=enforcing
+    when: (ansible_facts['distribution'] == "RedHat" and ansible_facts['distribution_major_version'] == "8")

@@ -1,0 +1,7 @@
+---
+- hosts: yum
+  become: yes
+  tasks:
+  - name: Executing Ping Module
+    ping:
+  - yum: name=vim state=latest

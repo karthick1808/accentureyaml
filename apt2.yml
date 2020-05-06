@@ -1,0 +1,12 @@
+---
+- hosts: apt
+  become: yes
+  tasks:
+  - name: Install a list of packages
+    apt:
+     pkg:
+     - vim
+     - nano
+     - wget
+     - curl
+     state: absent

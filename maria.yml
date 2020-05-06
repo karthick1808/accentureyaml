@@ -1,0 +1,19 @@
+---
+- name: Install and Configure mariadb 
+  hosts: all
+  remote_user: ec2-user
+  become: true
+  
+  vars:
+     mysql_port: 3389
+  
+  tasks:
+   - name: Install MariaDB
+     yum: name=mariadb-server state=latest 
+     when: (ansible_facts['distribution'] == "RedHat" and ansible_facts['distribution_major_version'] == "8")
+     
+   - name: Create mysql configuration file
+     template: src=my.cnf.j2 dest=/etc/my.cnf
+     when: (ansible_facts['distribution'] == "RedHat" and ansible_facts['distribution_major_version'] == "8")
+     
+

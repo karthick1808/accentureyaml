@@ -1,0 +1,10 @@
+---
+- hosts: yum
+  become: yes
+  tasks:
+  - name: Executing Ping Module
+    ping:
+  - name: Yum Package Manager installing the package
+    yum: 
+     name: vim
+     state: latest

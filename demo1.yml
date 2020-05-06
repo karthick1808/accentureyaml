@@ -1,0 +1,7 @@
+---
+- name: Playbook Created for Test Communication
+  hosts: all
+  tasks:
+   - name: Executing Ping Module
+     ping:
+
